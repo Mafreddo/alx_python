@@ -1,5 +1,5 @@
-def argv(name):
-    print(name)
+def argv(argv):
+    print(argv)
 argv("1.Hello")
 argv("2.Helberton")
 argv("3.School")
