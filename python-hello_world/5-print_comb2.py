@@ -1,2 +1,4 @@
 for number in range(00,100):
-    print(number,"format()")
+    print(number,end=",\t")
+print(format("","<2"))
+print()
