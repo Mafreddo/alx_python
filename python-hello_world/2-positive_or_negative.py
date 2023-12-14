@@ -8,4 +8,4 @@ if number> 0:
 if number== 0:
     print("0 is zero")
 if number< 0:
-    print("-98 is negitive")
+    print("-98 is negative")
