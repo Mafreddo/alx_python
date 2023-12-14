@@ -1,1 +1,2 @@
-print(pow(2, 2))
+def pow(a,b):
+    print(pow(2, 2))
