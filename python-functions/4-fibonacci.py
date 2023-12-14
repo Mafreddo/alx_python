@@ -11,6 +11,6 @@ def fibonacci_sequence(n):
             c=a+b
             a=b
             b=c
-            print(c)
+            print(c, end =",\t")
 
 fibonacci_sequence(5)
