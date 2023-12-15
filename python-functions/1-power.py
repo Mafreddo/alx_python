@@ -1,3 +1,3 @@
 def pow(a,b):
     print(a**b)
-print(pow(2,2))
+pow(2,2)
