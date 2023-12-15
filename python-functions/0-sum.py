@@ -1,4 +1,5 @@
-num1 = int(input("Enter Number 1: "))
-num2 = int(input("Enter Number 2: "))
-result = num1 + num2
-print(result)
+def add(a, b):
+    print(a+b)
+add(1, 2)
+add(98, 0)
+add(100, -2)
