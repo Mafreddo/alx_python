@@ -1,5 +1,5 @@
-def [__main__]
-def [__name__]
+if __name__ == __main___:
+    print("1:Hello")
 def argv(argv):
     print(argv)
 argv("1:Hello")
