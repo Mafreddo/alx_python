@@ -1,4 +1,6 @@
-def add_0
+def add_0:
+    a = 1
+    b = 2
 def [__main__]:
 def [__name___]:
 
