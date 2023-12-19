@@ -1,3 +1,5 @@
+def [__main__]
+def [__name__]
 def argv(argv):
     print(argv)
 argv("1:Hello")
