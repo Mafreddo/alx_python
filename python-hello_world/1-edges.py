@@ -1,8 +1,8 @@
 word1 = "Holberton"
 word2 = "School"
-print(word1[0:3])
-print(word1[7:9])
-print(word1[1:8])
-print(word2[0:3])
-print(word2[4:6])
-print(word2[1:6])
+print("First 3 letters: {}".format("Hol"))
+print("Last 2 letters: {}".format("on"))
+print("Middle word: {}".format("olberto"))
+print("First 3 letters: {}".format("Sch"))
+print("Last 2 letters: {}".format("ol"))
+print("Middle word: {}".format("chool"))
