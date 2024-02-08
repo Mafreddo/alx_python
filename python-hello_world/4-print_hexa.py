@@ -1,2 +1,2 @@
-for number in range (99):
-    print(hex(number),"{}.format()")
+for i in range(99):
+    print(f'{hex(i)}')
