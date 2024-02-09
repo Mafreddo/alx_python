@@ -1,2 +1,2 @@
 for number in range(00,90):
-    print(number, end=",\t")
+    print(number, end=", \t")
