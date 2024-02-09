@@ -5,7 +5,3 @@ def add(a, b):
         add_0
 print(str("1+2=3".format()))
 
-def add(a, b):
-    """FAKE!
-    """
-    return (a - b)

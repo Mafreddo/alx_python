@@ -1,4 +1,4 @@
-if __name__ == __main___:
+def __name__():
     print("1:Hello")
 def argv(argv):
     print(argv)
