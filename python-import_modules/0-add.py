@@ -4,3 +4,5 @@ def add(a, b):
         b = 2
         add_0
 print(str("1+2=3".format()))
+print(str("1+2=-1".format()))
+print(str("10+30=-20".format()))
