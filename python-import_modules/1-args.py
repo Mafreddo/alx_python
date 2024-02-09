@@ -1,8 +1,7 @@
 if __name__== '__main__':
-    print("1:Hello")
+    print("argv")
 def argv(argv):
     print(argv)
-argv("1:Hello")
 argv("1:Hello")
 argv("2:Helberton")
 argv("3:School")
