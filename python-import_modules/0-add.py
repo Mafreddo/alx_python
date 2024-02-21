@@ -1,7 +1,7 @@
-def add(a, b):
-    if __name__== __main__:
-        a = 1
-        b = 2
-        add_0
-print(str("1+2=3".format()))
-
+from add_0 import add
+if __name__ == "__main__":
+    """Demonstrate the usage of the add function."""
+    a = 1
+    b = 2 
+    c = add(a,b)
+    print("{} + {} = {}".format(a, b,c))
