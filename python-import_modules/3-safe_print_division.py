@@ -1,4 +1,8 @@
 def safe_print_division(a, b):
-    a = int(input("Enter first number:"))
-    b = int(input("Enter second number:"))
-    print("Qoutiont, a/b {}".format(a, b))
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = None
+    finally:
+        print("Inside result: {}".format(result))
+        return result

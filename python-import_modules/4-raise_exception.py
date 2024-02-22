@@ -1,4 +1,7 @@
-try:
-    raise_exception(TypeError)
-except TypeError as te:
-    print("Exception raised")
+def raise_exception():
+    x = "hello"
+    y = 5
+    try:
+        z = x + y
+    except TypeError:
+        print("Exception has been raised")

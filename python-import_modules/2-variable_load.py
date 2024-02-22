@@ -1,6 +1,4 @@
-__main__=__name__
-person1 = {
-    "name":"Letsha",
-    "country":"South Africa",
-    "age":"98"
-}
+from variable_load_2 import a
+
+if __name__ == "__main__":
+    print(a)
