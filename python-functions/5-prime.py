@@ -1,4 +1,8 @@
 def is_prime(number):
-    print(is_prime(15))
-    print(is_prime(-5))
-    print(is_prime(0))
+    if number > 1 and isinstance(number, int):
+        for i in range(2, int(number ** 0.5) + 1):
+            if number % i == 0:
+                return False
+        return True
+    else:
+         return False
