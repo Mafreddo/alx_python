@@ -1,4 +1,3 @@
-def my_function():
-    print("In my function")
- 
-my_function
+def reverse_string(string):
+    return string[::-1]
+reverse_string
