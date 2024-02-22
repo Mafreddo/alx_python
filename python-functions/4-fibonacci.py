@@ -1,16 +1,11 @@
 def fibonacci_sequence(n):
-    a=0
-    b=1
-    if n == 1:
-        print(a)
-    else:
-        print(a)
-        print(b)
-
-        for i in range(2, n):
-            c=a+b
-            a=b
-            b=c
-            print(c, end =",\t")
-
-fibonacci_sequence(5)
+    fibonacci_list = []
+    if n > 0 and isinstance(n, int):
+        a = 0
+        b = 1
+        for i in range(n):
+            fibonacci_list.append(a)
+            c = a + b
+            a = b
+            b = c
+    return fibonacci_list
