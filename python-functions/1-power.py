@@ -1,6 +1,3 @@
-def pow(a, b):
-    result = 1
-    for i in range(b):
-        result *= a
-
-    print= result
+def pow(a,b):
+    return a**b
+print (pow(2,4))
