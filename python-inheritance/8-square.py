@@ -50,7 +50,3 @@ class Square(Rectangle):
     def __repr__(self):
         return f"Square({self._Rectangle__width})"
     
-# s = Square(13)
-
-# print(s)
-# print(s.area())
