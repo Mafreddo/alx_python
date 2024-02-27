@@ -1,3 +1,2 @@
-def pow(a,b):
-    return a**b
-print (pow(2,4))
+def pow(a, b):
+    return (a ** b)
