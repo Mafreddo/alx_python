@@ -1,48 +1,43 @@
 import json
 import requests
+import sys
 
-def get_all_employees_todo_progress():
-    """
-    Retrieves TODO list progress for all employees using the REST API.
 
-    Returns:
-        None: Displays the employee TODO list progress in the specified format.
-    """
-    base_url = "https://jsonplaceholder.typicode.com/users"
+def get_user_data(user_id):
+    url = "https://jsonplaceholder.typicode.com/"
+    user_url = "{}users/{}".format(url, user_id)
+    response = requests.get(user_url)
+    return response.json()
 
-    try:
-        users_response = requests.get(base_url)
-        users_data = users_response.json()
 
-        all_employees_tasks = {}
+def get_user_tasks(user_id):
+    url = "https://jsonplaceholder.typicode.com/"
+    todos_url = "{}todos?userId={}".format(url, user_id)
+    response = requests.get(todos_url)
+    return response.json()
 
-        for user in users_data:
-            employee_id = user["id"]
-            employee_name = user["name"]
 
-            todos_endpoint = f"{base_url}/{employee_id}/todos"
-            todos_response = requests.get(todos_endpoint)
-            todos_data = todos_response.json()
+def export_all_to_json():
+    all_tasks = {}
+    for user_id in range(1, 11):  # Assuming user IDs range from 1 to 10
+        user_data = get_user_data(user_id)
+        user_tasks = get_user_tasks(user_id)
 
-            employee_tasks = [
-                {
-                    "username": employee_name,
-                    "task": todo["title"],
-                    "completed": todo["completed"]
-                }
-                for todo in todos_data
-            ]
+        l_task = []
+        for task in user_tasks:
+            dict_task = {
+                "username": user_data.get("username"),
+                "task": task.get("title"),
+                "completed": task.get("completed"),
+            }
+            l_task.append(dict_task)
 
-            all_employees_tasks[str(employee_id)] = employee_tasks
+        all_tasks[str(user_id)] = l_task
 
-        json_filename = "todo_all_employees.json"
-        with open(json_filename, "w") as json_file:
-            json.dump(all_employees_tasks, json_file, indent=4)
+    filename = "todo_all_employees.json"
+    with open(filename, "w") as json_file:
+        json.dump(all_tasks, json_file, indent=2)
 
-        print(f"JSON file '{json_filename}' created successfully!")
-
-    except requests.RequestException as e:
-        print(f"Error fetching data: {e}")
 
 if __name__ == "__main__":
-    get_all_employees_todo_progress()
+    export_all_to_json()
